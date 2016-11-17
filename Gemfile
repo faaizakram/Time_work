@@ -50,7 +50,7 @@ gem 'paperclip', '~> 5.1'
 gem 'responsive_active_admin'
 gem 'active_admin_theme'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
-
+gem 'figaro'
 
 
 group :development do 
