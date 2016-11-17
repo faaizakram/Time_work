@@ -1,0 +1,41 @@
+<div class="row" id="pin_show">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>
+          <%= @tracker.date.strftime("%d %b") %>
+        </p>
+        <p>
+          <%= @tracker.task %>
+        </p>
+        <p>
+          <%= @tracker.hours %>
+        </p>
+         
+        <p>
+        <% if @tracker.document.file? %>
+            <%= link_to "View File", @tracker.document.url %>
+          <% else %>
+        <% end %>
+        </p>  
+
+
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <div>
+              <% if user_signed_in? %>
+               <% if can? :update, @tracker %>
+                <%= link_to "Edit", edit_tracker_path, class: "btn btn-default" %>
+                <% end %>
+                <% if can? :destroy, @tracker %>
+                <%= link_to "Delete", tracker_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+               <% end %>  
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

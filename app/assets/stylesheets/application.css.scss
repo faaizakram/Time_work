@@ -1,0 +1,154 @@
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
+ body {
+	background: #E9E9E9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
+nav {
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	height: 70px;
+	margin: 0 auto;
+	.navbar-right {
+    margin-top: 12px!important;
+  }
+	.navbar-brand {
+	  margin-top: -10px;
+		a {
+
+			color: #BD1E23;
+			font-weight: bold;
+			    
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.container {
+	margin: 0 auto;
+	#pins {
+	  margin: 0 auto ;
+	  width: 100%;
+	  .box {
+		  margin: 10px;
+		  width: 350px;
+		  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+		  border-radius: 7px;
+		  float: left;
+		  text-align: center;
+		  h2 {
+		  	font-size: 22px;
+		  	margin: 0;
+		  	padding: 25px 10px;
+		  	a {
+					color: #474747;
+		  	}
+		  }
+		  .user {
+		  	font-size: 12px;
+		  	border-top: 1px solid #EAEAEA;
+				padding: 15px;
+				margin: 0;
+		  }
+		}
+	}
+
+#edit_page {
+	.current_image {
+		img {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+}
+
+#pin_show {
+	.panel-heading {
+		padding: 0;
+	}
+	.pin_image {
+		img {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.panel-body {
+		padding: 35px;
+		h1 {
+			margin: 0 0 10px 0;
+		}
+		.description {
+			color: #868686;
+			line-height: 1.75;
+			margin: 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+		.user {
+			padding-top: 8px;
+		}
+	}
+ }
+
+
+.pagination:before, .pagination:after {
+    content: " ";
+    display: table;
+}
+
+.pagination:after {
+    clear: both;
+}
+
+.pagination {
+    text-align: center;
+    margin: 2rem 0 5rem 0;
+    width: 100%;
+    a, .previous_page, .current, .next_page {
+        padding: 0.75rem 1rem;
+        margin: 0 .25rem;
+        border-radius: .15rem;
+        line-height: 2.25;
+        text-decoration: none;
+        background: #EDEFF5;
+        font-weight: 700;
+        font-size: .7rem;
+        font-style: normal;
+        color: #22292e;
+         &:hover {
+            background: #d2674e;
+            color: #fff;
+         }
+    }
+    .current {
+        background: #d2674e;
+        color: #fff;
+    }
+    .disabled {
+        color: #C0C0C0;
+        &:hover {
+            color: #C0C0C0;
+            background: #EDEFF5;
+        }
+    }
+}
+
+}
+textarea {
+	min-height: 250px;
+}
+
+
+@import "trackers";

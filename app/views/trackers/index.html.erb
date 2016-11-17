@@ -1,0 +1,16 @@
+<div class="container clearfix">
+	<div id="pins" class="transitions-enabled clearfix">
+	
+	  <% @trackers.each do |tracker| %>
+	    <div class="box panel panel-default">
+	      <h2>
+	        <%= link_to truncate(tracker.task, length:150), tracker %> <br>
+	        <%= tracker.date.strftime("%d %b") %>
+	      </h2>
+	    </div>
+	  <% end %>
+ </div>
+ <div class="pagination">
+   <%= will_paginate @trackers %>
+  </div>
+
