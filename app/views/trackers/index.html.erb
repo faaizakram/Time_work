@@ -1,16 +1,18 @@
 <div class="container clearfix">
 	<div id="pins" class="transitions-enabled clearfix">
-	
+	  <% running_total = 0 %>
 	  <% @trackers.each do |tracker| %>
 	    <div class="box panel panel-default">
 	      <h2>
 	        <%= link_to truncate(tracker.task, length:150), tracker %> <br>
 	        <%= tracker.date.strftime("%d %b") %>
 	      </h2>
+         <% running_total = running_total + (tracker.hours) %>
 	    </div>
 	  <% end %>
+	  <h4 class="pull-right">Total Hours: <%= (running_total) %></h4>
  </div>
- <div class="pagination">
+  <div class="pagination">
    <%= will_paginate @trackers %>
   </div>
 

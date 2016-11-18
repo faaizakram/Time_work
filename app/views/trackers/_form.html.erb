@@ -25,13 +25,15 @@
   <div class="form-group">
     <%= f.input :hours, input_html: { class: 'form-control' }, id: "1" %>
   </div>
-   <div class="balance"><span class="due" id="invoice_total">00.000</span>
+   <div class="balance"><span class="due" id="invoice_total"></span>
         <span class="subtotal_currency"></span></div>
-    Total<%=f.hidden_field :amount, :label => "Language", id: "invoice_total1" %>
     <br>
    <div class="form-group">
      <%= f.file_field :document  %>
    </div>
+   <div class="form-group">
+    <%= f.file_field :avatar %>
+  </div>
    
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

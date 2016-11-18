@@ -3,7 +3,7 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <p>
-          <%= @tracker.date.strftime("%d %b") %>
+          <%= @tracker.created_at.strftime("%d %b") %>
         </p>
         <p>
           <%= @tracker.task %>
@@ -11,7 +11,7 @@
         <p>
           <%= @tracker.hours %>
         </p>
-         
+             
         <p>
         <% if @tracker.document.file? %>
             <%= link_to "View File", @tracker.document.url %>
@@ -19,6 +19,11 @@
         <% end %>
         </p>  
 
+       <% if @tracker.avatar.file? %>
+            <%= image_tag @tracker.avatar.url(:medium) %>
+          <% else %>
+        <% end %>
+        </p>  
 
       <div class="panel-footer">
         <div class="row">
