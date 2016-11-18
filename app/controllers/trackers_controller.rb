@@ -53,7 +53,7 @@ class TrackersController < ApplicationController
 	private
 
 	def tracker_params
-		params.require(:tracker).permit(:amount, :created_at, :task, :hours, :document, :avatar)
+		params.require(:tracker).permit(:amount, :date, :task, :hours, :document, :avatar)
 	end
 
 	def find_tracker
