@@ -5,7 +5,7 @@
 	    <div class="box panel panel-default">
 	      <h2>
 	        <%= link_to truncate(tracker.task, length:150), tracker %> <br>
-	        <%= tracker.date.strftime("%d %b") %>
+	        <%= tracker.date %>
 	      </h2>
          <% running_total = running_total + (tracker.hours) %>
 	    </div>
