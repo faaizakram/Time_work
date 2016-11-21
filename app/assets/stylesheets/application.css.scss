@@ -28,7 +28,20 @@ nav {
 			}
 		}
 	}
+	.round-image {
+	top: 3px;
+	left: 10px;
+     a img{
+	        height: 45px;
+		    width: 45px;
+		    border-radius: 29px;
+		    margin-top: -16px;
+	
+	}
+ }   
+
 }
+
 
 .container {
 	margin: 0 auto;
@@ -42,6 +55,7 @@ nav {
 		  border-radius: 7px;
 		  float: left;
 		  text-align: center;
+
 		  h2 {
 		  	font-size: 22px;
 		  	margin: 0;
@@ -149,6 +163,8 @@ nav {
 textarea {
 	min-height: 250px;
 }
+
+
 
 
 @import "trackers";
