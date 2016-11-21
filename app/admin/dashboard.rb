@@ -15,7 +15,7 @@ ActiveAdmin.register_page "Dashboard" do
                 link_to tracker.task, [:admin, Tracker]
             end
             column :hours
-            column :date
+            column :time
             
         end
         strong {link_to "View All Tasks", admin_trackers_path}
