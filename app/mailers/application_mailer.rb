@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
 
-	default from: "faiz2.techflux@gmail.com"
+	# default from: "faiz2.techflux@gmail.com"
   
   def confirmation_instructions(record)
     devise_mail(record, :confirmation_instructions)
