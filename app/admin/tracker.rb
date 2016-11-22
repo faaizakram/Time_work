@@ -9,8 +9,10 @@ index do
 	column :user  
 	column :task
 	column :hours
-    column :"Date", :time
-    column :total
+    column :"Date", :created_at
+    column :running_total
     actions  
   end	 
+
+
 end
