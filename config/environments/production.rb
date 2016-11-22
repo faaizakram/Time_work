@@ -92,7 +92,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {  
   address: "smtp.gmail.com",
   port: 587,
-  domain: "heroku.com",
+  domain: "mighty-dawn-90670.herokuapp.com",
   authentication: "plain",
   enable_starttls_auto: true,
   openssl_verify_mode: 'none',

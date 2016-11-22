@@ -7,7 +7,6 @@ class Ability
       #    can :manage, :all
 
       if
-        
         can :create, Tracker do |tracker|
             tracker.user == user
         end
