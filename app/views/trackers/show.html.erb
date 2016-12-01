@@ -12,13 +12,7 @@
           <%= @tracker.hours %>
         </p>
              
-        <p>
-        <% if @tracker.document.file? %>
-            <%= link_to "View File", @tracker.document.url %>
-          <% else %>
-        <% end %>
-        </p>  
-
+        
        <% if @tracker.avatar.file? %>
             <%= image_tag @tracker.avatar.url(:medium) %>
           <% else %>

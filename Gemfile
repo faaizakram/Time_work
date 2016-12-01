@@ -52,7 +52,6 @@ gem 'active_admin_theme'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'figaro'
 
-
 group :development do 
 	gem 'sqlite3'
 end 

@@ -10,7 +10,6 @@ index do
 	column :task
 	column :hours
     column :"Date", :created_at
-    column :running_total
     actions  
   end	 
 
