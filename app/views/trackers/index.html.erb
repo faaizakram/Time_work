@@ -1,14 +1,12 @@
 <div class="container clearfix">
 	<div id="pins" class="transitions-enabled clearfix">
 	  <% running_total = 0 %>
-	  <h2>
-	    	<%= link_to "Excel sheet", "https://docs.google.com/spreadsheets/d/1DqkUtXDiEqSRrRJeMwCm6SaTcZvZP41yygKmFKdmwLI/edit?ts=57f5efd6#gid=341673592", :target => "_blank" %>
-	    </h2>
+	  
 	  <% @trackers.each do |tracker| %>
 	    <div class="box panel panel-default">
 	      <h2>
 	        <%= link_to truncate(tracker.task, length:150), tracker %> <br>
-	        <%= tracker.created_at %>
+	        <%= tracker.created_at.to_date %>
 	      </h2>
          <% running_total = running_total + (tracker.hours) %>
 	    </div>

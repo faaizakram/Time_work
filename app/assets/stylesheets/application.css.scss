@@ -50,7 +50,7 @@ nav {
 	  width: 100%;
 	  .box {
 		  margin: 10px;
-		  width: 350px;
+		   width: 100%;	  
 		  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 		  border-radius: 7px;
 		  float: left;
@@ -104,8 +104,11 @@ nav {
 			line-height: 1.75;
 			margin: 0;
 		}
+
+		
 	}
 	.panel-footer {
+		
 		padding: 20px 35px;
 		p {
 			margin: 0;

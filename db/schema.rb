@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120093526) do
+ActiveRecord::Schema.define(version: 20161206051109) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -43,13 +43,23 @@ ActiveRecord::Schema.define(version: 20161120093526) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "subtrackers", force: :cascade do |t|
+    t.string   "subtask"
+    t.integer  "hours"
+    t.string   "status"
+    t.integer  "tracker_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tracker_id"], name: "index_subtrackers_on_tracker_id"
+  end
+
   create_table "trackers", force: :cascade do |t|
-    t.decimal  "amount",              precision: 15, scale: 2, default: "0.0"
     t.datetime "date"
     t.string   "task"
-    t.float    "hours"
-    t.datetime "created_at",                                                   null: false
-    t.datetime "updated_at",                                                   null: false
+    t.integer  "hours"
+    t.string   "status"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"

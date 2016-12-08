@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   
   devise_for :users
-  resources :trackers;
+  resources :trackers
+
   root 'trackers#index'
   
 end

@@ -1,13 +1,22 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Subtracker do
+
+filter :user
+filter :subtask
+
+index do
 	
- filter :name
- filter :email
-	index do
-		column :id
-        column :email
-        column :name
-        actions
-    end
+	column :tracker do |deal|
+     link_to deal.tracker.task
+     end
+	column :user  
+	column :subtask
+	column :hours
+	column :status
+    
+	
+ 
+  end
+     
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -23,3 +32,4 @@ ActiveAdmin.register User do
 
 
 end
+

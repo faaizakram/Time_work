@@ -3,15 +3,31 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <p>
-          <%= @tracker.created_at %>
+      <b>Created Date:</b>   <%= @tracker.created_at.to_date %>
         </p>
         <p>
-          <%= @tracker.task %>
+      <b>Task:</b>  <%= @tracker.task %>
         </p>
-        <p>
-          <%= @tracker.hours %>
-        </p>
-             
+
+        <ol class="style">
+          <% @tracker.subtrackers.each do |subtracker| %>
+            <li class="subtask">
+            <div>
+              <b>Subtasks:</b><p><%= subtracker.subtask %></p>
+              </div>
+              <div>
+              <b>Subtask Hours:</b><p><%= subtracker.hours %></p>
+              </div>
+              <div>
+              <b>Subtask Status:</b><p> <%= subtracker.status %></p>
+              </div>              
+            </li>
+          <% end %>
+          </ol>
+
+      
+      <p><b>Task Total Hours:</b> <%= @tracker.hours %></p>
+      <p><b>Overall Task Status:</b> <%= @tracker.status %></p>  
         
        <% if @tracker.avatar.file? %>
             <%= image_tag @tracker.avatar.url(:medium) %>
@@ -25,10 +41,10 @@
             <div>
               <% if user_signed_in? %>
                <% if can? :update, @tracker %>
-                <%= link_to "Edit", edit_tracker_path, class: "btn btn-default" %>
+                <%= link_to "Edit", edit_tracker_path, class: "btn btn-primary" %>
                 <% end %>
                 <% if can? :destroy, @tracker %>
-                <%= link_to "Delete", tracker_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+                <%= link_to "Delete", tracker_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
                <% end %>  
               <% end %>
             </div>

@@ -1,3 +1,19 @@
 // Place all the styles related to the Trackers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.radio, .checkbox {
+	display :inline;
+	padding :20px;
+}
+
+.style li {
+		   list-style: none;
+		   border: 1px solid #ccc;
+		   padding :10px
+		}
+
+	.panel-footer {
+	   background-color: #ffffff ;
+       border-top: 1px solid #fff ;
+    }

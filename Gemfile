@@ -51,6 +51,7 @@ gem 'responsive_active_admin'
 gem 'active_admin_theme'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'figaro'
+gem "cocoon"
 
 group :development do 
 	gem 'sqlite3'

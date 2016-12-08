@@ -1,12 +1,16 @@
 class Tracker < ApplicationRecord
 	belongs_to :user
-  
-    
+  has_many :subtrackers 
+
+  accepts_nested_attributes_for :subtrackers, allow_destroy: true
     
   has_attached_file :avatar, styles: { medium: "150x150#", thumb: "100x100>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
-    
-  # attr_reader :date_from, :date_to
+  
+  validates :task,  presence: true
+  validates :hours, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 100 }   
+  
+  # attribute_der :date_from, :date_to
   
   # def initialize(params)
   #   params ||= {}
@@ -28,4 +32,8 @@ class Tracker < ApplicationRecord
 
 #To display current user name 
 # <%= tracker.user.name %>
+
+  def total 
+    Tracker.sum(&:hours)
+  end
 end
