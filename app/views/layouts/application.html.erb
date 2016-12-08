@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-brand">
           <%= link_to image_tag("logo.png"), root_path %>
@@ -20,7 +20,9 @@
           </li>
 
             <li>
-                <%= link_to "New Task", new_tracker_path %>
+
+                <%= link_to "New Task", new_tracker_path %> 
+                
             </li>
             <li>
               <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
@@ -29,10 +31,10 @@
         <% else %>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <%= link_to "Sign Up", new_user_registration_path %>
+              <%= link_to "Sign_Up", new_user_registration_path, class: "glyphicon glyphicon-user" %>
             </li>
             <li>
-              <%= link_to "Sign In", new_user_session_path %>
+              <%= link_to "Sign_In", new_user_session_path, class: "glyphicon glyphicon-log-in" %>
             </li>
           </ul>
         <% end %>

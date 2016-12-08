@@ -7,7 +7,7 @@ class Tracker < ApplicationRecord
   has_attached_file :avatar, styles: { medium: "150x150#", thumb: "100x100>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   
-  validates :task,  presence: true
+  validates :task, :hours, presence: true
   validates :hours, :numericality => { :greater_than_or_equal_to => 0, :less_than_or_equal_to => 100 }   
   
   # attribute_der :date_from, :date_to

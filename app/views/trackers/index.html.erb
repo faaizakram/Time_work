@@ -5,8 +5,8 @@
 	  <% @trackers.each do |tracker| %>
 	    <div class="box panel panel-default">
 	      <h2>
-	        <%= link_to truncate(tracker.task, length:150), tracker %> <br>
-	        <%= tracker.created_at.to_date %>
+	        <%= tracker.created_at.to_date %> <br>
+	        <%= link_to truncate(tracker.task, length:150), tracker %> 
 	      </h2>
          <% running_total = running_total + (tracker.hours) %>
 	    </div>
