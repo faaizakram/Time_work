@@ -16,3 +16,13 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+<script>
+       $(document).ready(function(){
+         setTimeout(function(){
+         $('.flash').fadeOut("slow", function() {
+          $(this).remove();
+         });
+        }, 3000);
+      })
+  </script>

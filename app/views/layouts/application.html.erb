@@ -7,7 +7,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <nav class="navbar navbar-default">
+    <!-- <div class="container">
+      <%  notice %>
+        <div class="notice_wrapper">
+           <p class="notice"><%= notice %></p>
+        </div>
+        
+        <%  alert %>
+        <div class="notice_wrapper">
+           <p class="alter"><%= alert %></p>
+        </div>
+      <%  %>
+    </div>
+ -->
+      <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-brand">
           <%= link_to image_tag("logo.png"), root_path %>
@@ -40,12 +53,15 @@
         <% end %>
       </div>
     </nav>
-    <div class="container">
+
+  <div class="container">
+    <div class="flash">
       <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: "alert alert-info" %>
+        <%= content_tag :section, msg,  class: "alert alert-info" %>
       <% end %>
     </div>
-      <%= yield %>
-    </div>
+  </div>
+  <%= yield %>
+    
   </body>
 </html>
