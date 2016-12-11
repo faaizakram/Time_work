@@ -2,8 +2,8 @@
   <div class="nested-fields">
     <%= f.input :subtask, input_html: { class: 'form-input form-control' } %>
     <%= f.input :hours, as: :string, input_html: { class: 'form-input form-control' } %>
-    <%= f.input :status, as: :radio_buttons, collection: ['Inprogress', 'Incompleted', 'completed'] %>
-    <%= link_to_remove_association "Remove Step", f, class: "btn btn-default form-button" %>
+    <%= f.input :status, as: :radio_buttons, collection: ['Inprogress', 'Incompleted', 'Completed'] %>
+    <%= link_to_remove_association "Remove Step", f, class: "btn btn-danger form-button" %>
   </div>
 </div>
 

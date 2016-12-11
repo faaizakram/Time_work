@@ -16,8 +16,8 @@
   <% end %>
   
   <div class="form-group">
-    <%= f.date_select :date, input_html: { class: 'form-control' } %>
-  </div>
+   <%= f.date_select :date %>  
+</div>
   
   <div class="form-group">
     <%= f.input :task, as: :text, input_html: { class: 'form-control' } %>
@@ -28,7 +28,7 @@
               <%= render 'subtracker_fields', f: subtracker %>
             <% end %>
            <div class="links">
-            <%= link_to_add_association 'Add subtask', f, :subtrackers, class: "btn btn-default add-button" %>
+            <%= link_to_add_association 'Add subtask', f, :subtrackers, class: "btn btn-primary add-button" %>
            </div>
         </div>
 
@@ -36,11 +36,11 @@
     <%= f.input :hours, as: :string, input_html: { class: 'form-control' } %>
   </div>
 
-   
-  <span class="inline">
-   <%= f.input :status, as: :radio_buttons, :item_wrapper_class => 'inline',
-     collection: ['Inprogress', 'Incompleted', 'completed'] %>
-   </span>
+  <div class="form-group">
+    <span class="inline">
+     <%= f.input :status, as: :radio_buttons, collection: ['Inprogress', 'Incompleted', 'Completed'] %>
+     </span>
+   </div>
   
 
    <div class="form-group">
