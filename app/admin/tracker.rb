@@ -9,7 +9,7 @@ ActiveAdmin.register Tracker do
 		column :user  
 		column :task
 		column :hours
-		column :status
+		column :flag
 	    column :"Date", :created_at
 	   #  column :Subtrackers do |i|
 	   #  columns  i.subtrackers.status
