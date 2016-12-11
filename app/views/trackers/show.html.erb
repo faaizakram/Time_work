@@ -27,8 +27,7 @@
 
       
       <p><b>Task Total Hours:</b> <%= @tracker.hours %></p>
-      <p><b>Overall Task Status:</b> <%= @tracker.flag %></p>  
-        
+              
        <% if @tracker.avatar.file? %>
             <%= image_tag @tracker.avatar.url(:medium) %>
           <% else %>
