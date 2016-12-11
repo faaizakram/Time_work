@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210045403) do
+ActiveRecord::Schema.define(version: 20161206051109) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -43,11 +43,6 @@ ActiveRecord::Schema.define(version: 20161210045403) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "faizs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "subtrackers", force: :cascade do |t|
     t.string   "subtask"
     t.integer  "hours"
@@ -62,7 +57,7 @@ ActiveRecord::Schema.define(version: 20161210045403) do
     t.datetime "date"
     t.string   "task"
     t.integer  "hours"
-    t.string   "status"
+    t.string   "flag"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "user_id"

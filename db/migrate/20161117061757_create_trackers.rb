@@ -5,7 +5,7 @@ class CreateTrackers < ActiveRecord::Migration[5.0]
       t.datetime :date
       t.string :task
       t.integer :hours
-      t.string :status
+      t.string :flag
       t.timestamps
     end
   end
