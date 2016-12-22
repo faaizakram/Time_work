@@ -6,6 +6,11 @@ ActiveAdmin.register Tracker do
 
 
 	index do
+		column "Approve / Reject" do 
+  link_to("Approve / Reject")
+end
+
+
 		column :user  
 		column :task
 		column :hours
