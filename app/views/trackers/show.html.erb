@@ -1,5 +1,22 @@
 <div class="row" id="pin_show">
   <div class="col-md-8 col-md-offset-2">
+  
+  <% subt_total = 0 %>
+     <% @tracker.subtrackers.each do |subtracker| %>
+     <h2>
+         <% subt_total = subt_total + (subtracker.hours) %>
+     </h2>
+  <% end %>
+  <h4 class="pull-right">Subtotal Hours: <%= (subt_total) %></h4>
+  
+<% grand_total = 0 %>
+  <% @tracker.subtrackers.each do |subtracker| %>
+  <% grand_total =  subt_total %>
+<% end %>
+  <h4 class="pull-right">Grandtotal Hours: <%= (grand_total) %></h4>
+  
+
+
     <div class="panel panel-default">
       <div class="panel-body">
         <p>
@@ -24,7 +41,6 @@
             </li>
           <% end %>
           </ol>
-
       
       <p><b>Task Total Hours:</b> <%= @tracker.hours %></p>
               
@@ -33,7 +49,8 @@
           <% else %>
         <% end %>
         </p>  
-
+        
+   
       <div class="panel-footer">
         <div class="row">
           <div class="col-md-6">
