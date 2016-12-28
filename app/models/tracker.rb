@@ -34,6 +34,6 @@ class Tracker < ApplicationRecord
 # <%= tracker.user.name %>
 
   def total 
-    Tracker.sum(&:hours)
+    subtrackers.sum(&:hours)
   end
 end

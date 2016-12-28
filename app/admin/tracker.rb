@@ -6,21 +6,26 @@ ActiveAdmin.register Tracker do
 
 
 	index do
+	# 	column "Approve / Reject" do 
+ #  link_to("Approve / Reject")
+ # end
+
+        total = 0
 		column :user  
 		column :task
-		column :hours
+		column("Subtask Hours") {|resource| total = total + resource.total}
 	    column :"Date", :created_at
-	   #  column :Subtrackers do |i|
-	   #  columns  i.subtrackers.status
-	   # end  
+	   
+          actions
+	    div :class => "panel" do
+	       h3 "Total: #{total}"
+	    end
+	   # #  column :Subtrackers do |i|
+	   # #  columns  i.subtrackers.status
+	   # # end  
+    # end
+  
+  end
+end
 	
-	    actions 
-	   end
-    
-    
-    
-   
-           
-   
- end
 
