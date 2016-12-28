@@ -50,13 +50,12 @@ gem 'paperclip', '~> 5.1'
 gem 'responsive_active_admin'
 gem 'active_admin_theme'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
-gem 'figaro'
 gem "cocoon"
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                               :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 gem 'simple-form-datepicker', '~> 0.1.3'
 gem 'jquery-ui-rails'
-
+gem 'chartkick'
 group :development do 
 	gem 'sqlite3'
 end 
@@ -64,4 +63,5 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+  gem 'figaro'
 end
