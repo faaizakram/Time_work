@@ -1,5 +1,5 @@
 class Tracker < ApplicationRecord
-	belongs_to :user
+	belongs_to :user 
   has_many :subtrackers 
 
   accepts_nested_attributes_for :subtrackers, allow_destroy: true
@@ -34,6 +34,6 @@ class Tracker < ApplicationRecord
 # <%= tracker.user.name %>
 
   def total 
-    trackers.to_a.sum(&:hours)
+    subtrackers.sum(&:hours)
   end
 end

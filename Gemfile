@@ -55,7 +55,7 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                               :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 gem 'simple-form-datepicker', '~> 0.1.3'
 gem 'jquery-ui-rails'
-
+gem 'chartkick'
 group :development do 
 	gem 'sqlite3'
 end 

@@ -8,7 +8,9 @@ index do
 	column :tracker do |deal|
      link_to deal.tracker.task
      end
-	column :user  
+     column :user do |f|
+     link_to f.tracker.user
+     end  
 	column :subtask
 	column :hours
 	column :status
