@@ -13,12 +13,12 @@ ActiveAdmin.register Tracker do
         total = 0
 		column :user  
 		column :task
-        column("Subtask Hours") {|resource| total = total + resource.total}
+        # column("Subtask Hours") {|resource| total = total + resource.total}
 	    column :"Date", :created_at
 	    actions
-	    div :class => "panel" do
-	        h3 "Total: #{total}"
-	     end
+	    # div :class => "panel" do
+	    #     h3 "Total: #{total}"
+	    #  end
 	 #   # #  column :Subtrackers do |i|
 	 #   # #  columns  i.subtrackers.status
 	 #   # # end  
