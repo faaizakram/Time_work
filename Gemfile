@@ -56,6 +56,14 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
 gem 'simple-form-datepicker', '~> 0.1.3'
 gem 'jquery-ui-rails'
 gem 'chartkick'
+gem 'mail_form'
+# gem 'client_side_validations', 
+#     github: 'DavyJonesLocker/client_side_validations', 
+#     branch: 'rails5'
+# gem 'client_side_validations-simple_form', 
+#     github: 'DavyJonesLocker/client_side_validations-simple_form', 
+#     branch: 'rails5'
+# gem 'ransack', github: 'activerecord-hackery/ransack'
 group :development do 
 	gem 'sqlite3'
 end 

@@ -33,9 +33,7 @@
           </li>
 
             <li>
-
-                <%= link_to "New Task", new_tracker_path %> 
-                
+                <%= link_to "New Task", new_tracker_path %>                 
             </li>
             <li>
               <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
@@ -53,7 +51,14 @@
         <% end %>
       </div>
     </nav>
-
+    <div class="container">
+      <div class="contactbtn">
+        <% if user_signed_in? %>
+         <%= link_to "Workupdate", new_contact_path  %>
+        <% end %>
+     </div>
+  </div>
+  
   <div class="container">
     <div class="flash">
       <% flash.each do |name, msg| %>

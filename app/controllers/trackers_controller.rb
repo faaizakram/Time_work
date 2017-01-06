@@ -10,8 +10,9 @@ class TrackersController < ApplicationController
         # @trackers = Tracker.all.order("created_at DESC")
          @trackers = Tracker.where(:user_id => current_user.id).order("created_at DESC").paginate(:page => params[:page], :per_page => 9)
         # @search = Tracker.new(params[:search])
-        # @trackers = @search.scope    
-    end
+        # @trackers = @search.scope   
+
+     end
 
 
 

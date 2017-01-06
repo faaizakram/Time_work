@@ -34,6 +34,9 @@ class Tracker < ApplicationRecord
 # <%= tracker.user.name %>
 
   def total 
-    subtrackers.sum(&:hours)
+    subtrackers.sum(&:hours).compact
   end
 end
+# def total_amount_spent_cents
+#   packs.map(&:amount).compact.sum
+# end

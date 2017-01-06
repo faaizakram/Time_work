@@ -17,5 +17,6 @@
 //= require bootstrap-sprockets
 //= require Chart.bundle
 //= require chartkick
+//= require rails.validations
 //= require_tree .
 

@@ -4,8 +4,5 @@ class Subtracker < ApplicationRecord
   # def total_hrs
   #   self.subtracker.sum(:hours)
   # end
- def total 
-    trackers.to_a.sum(&:hours)
-  end
-  
+ 
 end
